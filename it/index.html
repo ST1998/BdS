@@ -5,234 +5,155 @@
 	<meta name="description" content="">
 	<meta name="author" content="BdS">
 	<meta name="keywords" content="" />
-
 	<title>BdStegon - 2019</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
 
-<style>
-html,
-body {
-	height: 100%;
-	font-family: Verdana, Geneva, sans-serif; }
+<style>html, body { height: 100%; font-family: Verdana, Geneva, sans-serif; }
+a, a:active, a:focus { outline: none; }
+.page-header { color: #3498db; }
+a { color: #3498db; }
+a:hover, a:active { color: #34495e; }
+a:hover, a:visited, a:link, a:active { text-decoration: none; }
+.panel { background:rgba(255,255,255,0); }
+.panel-default > .panel-heading { background: #3498db; color: #ffffff; }
+.panel-default > .panel-body { background:rgba(255,255,255,0.75); }
+.footer-in { margin: 0px 0; color: #ffffff; }
+.footer-in a { color: #ffffff; }
+.footer-in a:hover { color: #95a5a6; }
+.footer-red { background-color: #2980b9; }
+.footer { position: fixed; left: 0; bottom: 0; width: 100%; background-color: #3498db; }
+.footer2 { position: fixed; left: 0; bottom: 100; width: 100%; background-color: #3498db; }
+html{ scroll-behavior: smooth; }</style>
 
-body {
-	padding-top: 50px;
-	background-image: url('img/watermark.png');
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center; }
+<link rel="shortcut icon" href="/BdS/fav16.ico"></head><body id="home"><div class="container"><div class="row"><div class="col-xs-12">
 
-a, a:active, a:focus {
-	outline: none; }
-
-.page-header {
-	color: #3498db; }
-
-a {
-	color: #3498db; }
-
-a:hover, a:active {
-	color: #34495e; }
-
-a:hover, a:visited, a:link, a:active {
-	text-decoration: none; }
-
-hr {
-	visibility: hidden; }
-
-.panel {
-	background:rgba(255,255,255,0); }
-
-.panel-default > .panel-heading {
-	background: #3498db;
-	color: #ffffff; }
-
-.panel-default > .panel-body {
-	background:rgba(255,255,255,0.75); }
-
-.modal-header {
-	background: #880000;
-	color: #ffffff; }
-
-.modal-header > .close {
-	color: #ffffff;
-	opacity: 1; }
-
-.footer-in {
-	margin: 15px 0;
-	color: #ffffff; }
-
-.footer-in a {
-	color: #ffffff; }
-
-.footer-in a:hover {
-	color: #95a5a6; }
-
-.footer-red {
-	background-color: #2980b9; }
-
-.alphabox {
-	background:rgba(0,0,0,0.2); }
-
-.invisiwidth {
-	width: 100%; }
-
-.img-fill {
-	width: 100%; }
-
-.hovertext:after {
-	content:attr(name);
-	position:absolute;
-	white-space: nowrap;
-	top:30px;
-	padding:0.5em 20px;
-	font-weight: bold;
-	background:rgba(136,0,0,0.5);
-	text-decoration:none;
-	color:#fff; }
-
-.hovertext-random:after {
-	font-size: 70%;
-	content:attr(name);
-	position:absolute;
-	white-space: nowrap;
-	top:30px;
-	padding:0.5em 10px;
-	font-weight: bold;
-	background:rgba(136,0,0,0.5);
-	text-decoration:none;
-	color:#fff; }
-	
-.fixed-nav-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  width: 100%;
-  height: 50px;
-  background-color: #2980b9; }
-
-ul {
-  position:webkit-sticky;
-  position: sticky;
-  top: 0;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden; }
-
-li {
-  float: left; }
-
-.content {
-  margin-top: 20px; }
-
-.fixed-nav-bar li, .fixed-nav-bar a { 
-  height: 46px;
-  line-height: 46px; }
-
-.menu {
-  width: 100%;
-  max-width: 1500px; }
-
-.menu a, .menu a:visited {
-  color: #ffffff; }
-
-.menu a:hover, .menu a:target {
-  color: #ebebeb; }
-
-.menu-items {
-  display: inline-block; }
-
-.sitename {
-  display: inline-block;
-  margin-right: 20px;
-  margin-left: 10px; }
-
-.menu-items li {
-  display: inline-block;
-  margin-right: 10px;
-  margin-left: 10px; }
-
-.menu-items a {
-  text-decoration: none; }
-
-.show, .hide {
-  display: none;
-  padding-left: 15px;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center left;
-  color: #dde1e2; }
-
-.show { background-image: url(); }
-.hide { background-image: url(); }
-
-@media only screen and (max-width: 1500px) {
-  .menu { 
-    position: relative;
-    width: 100%; }
-
-  .sitename {
-    position: absolute;
-    top: 0;
-    left: 8px;
-    margin-left: 0px; }
-
-  .menu-items {
-    display: none; 
-    width: 100%;
-    margin-top: 50px;
-    background-color: #3498db; }
-
-  .menu-items li {
-    display: block;
-    text-align: center; }
-  
-  .show, .hide {  
-    position: absolute;
-    top: 0;
-    right: 8px; }
-
-  .show {
-    display: inline-block; }
-
-  .hide {
-    display: none; }
-
-  #menu:target .show {
-    display: none; }
-
-  #menu:target .hide, #menu:target .menu-items {
-    display: inline-block; } }
-
-@media only screen and (max-width: 220px) {
-  .sitename, .show, .hide {
-    font-size: 12px; } }</style>
-
-<link rel="shortcut icon" href="/BdS/fav16.ico"></head><body id="home">
-
-	<nav class='fixed-nav-bar'><div class='menu' id='menu'>
-		<a class='sitename' href='#home'><img src="/BdS/logo.png" /><b> BdStegon - 2019</b></a>
-
-		<b><a class='show' href='#menu'>[ ☰ ]</a><a class='hide' href='#'>[ ☰ ]</a>
-			<ul class='menu-items'>
-				<li><a href="https://t.me/BdStegon">Telegram</a></li>
-				<li><a href="https://www.ludomedia.it/buongiorno-di-stegon-4572S">Ludomedia</a></li>
-				<li><a href="https://st1998.github.io/Prismesh/it/">Prismesh</a>
-				<li><a href="https://stegon.blogspot.it">S's Ownpage</a></li></li>
-				<li><a href="/BdS/en/">🇬🇧 ENG</a></li></li>
-			</ul></div></nav></b>
-    
-	<div class="container"><div class="row"><div class="col-xs-12">
+<div class="footer2"><div class="row footer-in"><p><center><b>
+	<font size="3"><a href="https://t.me/BdStegon">Telegram</a> | <a href="https://st1998.github.io/Prismesh/it/" target="_blank">Prismesh</a> | <a href="https://stegon.blogspot.it" target="_blank">S's Ownpage</a> | <a href="https://github.com/ST1998/" target="_blank">GitHub</a> | <a href="https://www.paypal.me/Steveno98">Dona</a> | <a href="/BdS/en/">🇬🇧 ENG</a></font></b></center></p></div></div>
 				
-	<p id="home"><div class="panel panel-default"><div class="panel-heading"><h4>Descrizione</h4></div><div class="panel-body">
+	<br><br><br><p id="home"><div class="panel panel-default"><div class="panel-heading"><h4>Descrizione</h4></div><div class="panel-body">
 		<center><b>Sito web per archiviare le domande del giorno di Buong. di Stegon (BdS)!</b><br><br>BdS è un evento giornaliero, dove pubblico un post con la domanda del giorno, dalle 6 alle 12 e se non viene pubblicata in tempo, verrà posticipata. L'idea nasce nel 30 Lug. 2019, prendendo ispirazione da uno che faceva di frequenza le domande del giorno nei video, cogliendo la palla al balzo e servì, in primis, per rianimare Prismando (mio gruppo principale), che di attività dei partecipanti continuava a calare:<br><br><b>Buongiorno mondo! Come va? Come state? Svegliati bene? Io bene, grazie!</b><br><br>Il giorno dopo, la rielaborò, rendendo più bizzarra:<br><br><b>Buongiorno a tuuuutttiiiiiiii!!! Come va? Come state? Famiglia tutto a posto? Pure il lavoro e persino i vostri occhietti appena svegli?</b><br><br>Nel 11 Ago., nacque ufficialmente BdS. All'inizio, era un'esclusiva dei gruppi Prismando, dopo il successo su Telegram, venne espanso in alcuni gruppi esterni e anche su Ludomedia, tramite una stanza dedicata (dal 17 Ago.), durante una discussione con uno se si poteva espandere l'evento all'esterno di Telegram. Ogni dom. del giorno su Ludomedia è quella del giorno precedente su Telegram (fino al 1 Ott.). BdS si espande ancor di più nell'Inglese, per chi non conosce l'Italiano (dal 8 Ott.).<br><br><b>Per trovar con facilità una dom. del giorno in un gruppo Telegram, premi 🔍 (non qui, in un gruppo) e scrivere #BdS. Se non la si trova, vuol dire che non è ancora disponibile.</b><center></div></div></div></div>
 				
+	<p id="12"><div class="panel panel-default"><div class="panel-heading"><h4>Dicembre</h4></div><div class="panel-body">
+		<center><b>( 31 ) </b><i>Quale sono le cose che non avete ancora fatto nella vostra vita ma che vi piacerebbe tanto fare?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+						
+		<b>( 30 ) </b><i>Quali sono le cose che più vi ha stupito del vostro animale da compagnia?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 28 ) </b><i>Quali sono i nomi più bizzarri e divertenti del Wi-Fi che abbiate mai visto?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 27 ) </b><i>Quale cibo ti piace davvero, ma non puoi permetterti di eccedere?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+						
+		<b>( 26 ) </b><i>Se tu avessi un tema musicale, quale sarebbe?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 25 ) </b><i>Chi sono le persone più strane (per voi) che abbiate mai conosciuto?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 24 ) </b><i>Cosa vorreste che le persone non vi regalassero?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 23 ) </b><i>Quale gioco da tavolo natalizio preferireste di più giocare invece che alla più tradizionale Tombola?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 21 ) </b><i>Vi è mai capitato di messaggiare con la persona sbagliata? Se sì, come vi siete sentiti?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 20 ) </b><i>Ti é mai capitato di trovare cose strane pulendo all'interno della tua stanza? Se si, quali?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 19 ) </b><i>Quale sono le scelte più sbagliate che abbiate mai fatto?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 18 ) </b><i>Quale sono le tipo di persone che non sopportate / detestate nei social media?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 17 ) </b><i>Cosa vi porta spesso a camminare avanti e indietro senza una precisa meta?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+						
+		<b>( 16 ) </b><i>Quali film non siete riusciti a vedere fino alla fine? Se volete, motivate!</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>	
+							
+		<b>( 14 ) </b><i>Quali sono dei loghi che apprezzate / gradite / preferite maggiormente?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 13 ) </b><i>Qual è il vostro modo preferito di scherzare con le persone?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 12 ) </b><i>Quando avete pensato "ne ho abbastanza"?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 11 ) </b><i>Preferite di più leggere un libro cartaceo o in digitale?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 10 ) </b><i>Quando avevate capito di essere innamorati?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 9 ) </b><i>Quali sono dei momenti dove provate maggiormente noia?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 7 ) </b><i>Quale sono le parole che usate spesso?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 6 ) </b><i>Se aveste la possibilità di cambiare nome, quale scegliereste?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+						
+		<b>( 5 ) </b><i>Che tipo di capigliatura avete?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+
+		<b>( 4 ) </b><i>Quali estensioni / add-on dei browser usate spesso?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+
+		<b>( 3 ) </b><i>Quali sono dei motivi specifici per cui vi capita di non riuscire / voler a dormire?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+
+		<b>( 2 ) </b><i>In quali situazioni vi siete sentiti degli inetti?</i><br><br><a href=""><b>> Ludomedia <</b></a></div></div>
+				
+	<p id="11"><div class="panel panel-default"><div class="panel-heading"><h4>Novembre</h4></div><div class="panel-body">
+		<center><b>( 30 ) </b><i>Quali sono stati i regali che avete detestato / vi ha deluso maggiormente al vostro compleanno? Se volete, spiegate la motivazione!</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 29 ) </b><i>Quali sono stati i videogiochi più facili che abbiate mai giocato?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 28 ) </b><i>Quali sono le cose che ti fa sentire meglio quando siete giù di morale / umore?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 27 ) </b><i>Hai mai detto una qualche bugia per far star meglio qualcuno? Se sì, quale?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 26 ) </b><i>Siete (o vi sentite) più estroversi o introversi?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 25 ) </b><i>Quali sono le caratteristiche che cercate in un amico?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<font color="#ED2939"><b>( 24 ) </b></font><i>Che cosa fareste se foste gli unici sopravvissuti in un incidente aereo?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+						
+		<b>( 23 ) </b><i>Quali sono gli alimenti che avete detestato / vi ha deluso (la preparazione può variare)? Se volete, spiegate la motivazione!</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 22 ) </b><i>Quale sono le lingue che conoscete, oltre all'Italiano?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 21 ) </b><i>Qual è la dura verità che avete dovuto accettare e che vi ha resi più forti?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 20 ) </b><i>Se poteste tornare indietro nel tempo e dare un consiglio al vostro tu stesso da giovane, quale consiglio dareste?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 19 ) </b><i>Quali sono le cose che temete maggiormente nella vostra vita?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 18 ) </b><i>Cosa desiderate di più fosse accettabile socialmente?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<font color="#ED2939"><b>( 17 ) </b></font><i>Quali sono i tormentoni che preferite / apprezzate / gradite maggiormente?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+						
+		<b>( 16 ) </b><i>Quali sono i Pokémon che avete detestato / vi ha deluso maggiormente? Se volete, motivate tale scelta!</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 15 ) </b><i>Quali sono degli oggetti che non hanno una gran utilità, ma vi circondano quotidianamente?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 14 ) </b><i>Qual è stata l'esperienza più difficile che abbiate mai avuto nella vostra vita?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 13 ) </b><i>Quale sono le pronunce errate che vi è capitato di dire con frequenza?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 12 ) </b><i>Che cos'è per voi l'amicizia e come la descrivereste?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 11 ) </b><i>Siete più dei tipi da domande o risposte?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<font color="#ED2939"><b>( 10 ) </b></font><i>Quali sono gli insetti (non artropodi) che preferite / gradite / apprezzate maggiormente? Se volete, motivate!</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 9 ) </b><i>Quale sono state le vostre vacanze che vi ha deluso / annoiato maggiormente?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 8 ) </b><i>Quando guardate al passato, cosa vi manca maggiormente?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 7 ) </b><i>Cos’è che non vorreste dimenticare mai?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 6 ) </b><i>La paura di sbagliare cosa vi ha impedito di compiere?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+						
+		<b>( 5 ) </b><i>Quali alimenti e/o bevande gradite di più / prendete con frequenza per la cena?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+
+		<b>( 4 ) </b><i>Siete più dei tipi da abbracci o baci?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+
+		<font color="#ED2939"><b>( 3 ) </b></font><i>Quali sono stato gli scherzi migliori che abbiate mai fatto?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+
+		<b>( 2 ) </b><i>Quali sono i canali YouTube che avete detestato / vi ha deluso / annoiato maggiormente?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+
+		<b>( 1 ) </b><i>Siete più mentalmente logici o creativi?</i><br><br><a href=""><b>> Ludomedia <</b></a></center></div></div>
+			
 	<p id="10"><div class="panel panel-default"><div class="panel-heading"><h4>Ottobre</h4></div><div class="panel-body">
-		<center><b>( 29 ) </b><i>Quali sono i personaggi orrorifici (che non necessariamente devono far parte del genere Horror) che preferite / gradite / apprezzate maggiormente?</i><br><br><a href="https://www.ludomedia.it/buongiorno-di-stegon-4572S?i=4559517"><b>> Ludomedia <</b></a><br><br>
+		<center><b>( 31 ) </b><i>Quali sono i costumi che vi portate la maggior parte delle volte e come vi piace passare il tempo ad Halloween?</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+							
+		<b>( 30 ) </b><i>Quali sono i Creepygames che gradite / preferite maggiormente? Se volete, raccontate il motivo di tale scelta!</i><br><br><a href=""><b>> Ludomedia <</b></a><br><br>
+						
+		<b>( 29 ) </b><i>Quali sono i personaggi orrorifici (che non necessariamente devono far parte del genere Horror) che preferite / gradite / apprezzate maggiormente?</i><br><br><a href="https://www.ludomedia.it/buongiorno-di-stegon-4572S?i=4559517"><b>> Ludomedia <</b></a><br><br>
 							
 		<b>( 28 ) </b><i>Quali sono le paure che vi colpiscono maggiormente?</i><br><br><a href="https://www.ludomedia.it/buongiorno-di-stegon-4572S?i=4558457"><b>> Ludomedia <</b></a><br><br>
 							
@@ -394,11 +315,6 @@ li {
 
 		<font color="#ED2939"><b>( 11 ) </b></font><i>Oggi è Domenica e come vi piacerebbe passare in codesto giorno della settimana?</i></center></div></div></div></div></div>
 
-<style>.footer { position: fixed; left: 0; bottom: 0; width: 100%; background-color: #3498db; }</style>
-
-<div class="footer"><div class="row footer-in"><p><center>
-	<font size="5"><a href="#8"><b>Ago</b></a> | <a href="#9"><b>Set</b></a> | <a href="#10"><b>Ott</b></a></font></center></p></div></div>
-
-<style>html{ scroll-behavior: smooth; }</style>
-	
-<div class="footer-red"><div class="container"><div class="row footer-in"><center><b>Dal creatore di <a href="https://stegon.blogspot.it" target="_blank">Stegon's Ownpage</a> e <a href="https://st1998.github.io/Prismesh/it/" target="_blank">Prismesh</a> | 2019 | <a href="https://github.com/ST1998/">GitHub</a> </a><br><br><a href="https://www.paypal.me/Steveno98">> DONA (tramite PayPal) <</a></b></center><br><br><br><br><br><br></div></div></div></body></html>
+<div class="footer"><div class="row footer-in"><p><center><b>
+	<font size="5"><a href="#8"><b>Ago</b></a> | <a href="#9"><b>Set</b></a> | <a href="#10"><b>Ott</b></a> | <a href="#11"><b>Nov</b></a> | <a href="#12"><b>Dic</b></a></font><br><br>
+	<font size="4"><b><a href="#home"><img src="/BdS/logo.png" /> 2019</a></b></font></b></center></p></div></div><br><br><br><br><br><br></body></html>
